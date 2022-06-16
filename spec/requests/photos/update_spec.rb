@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Photos", type: :request do
-  describe "PUT /update" do
+RSpec.describe 'Photos', type: :request do
+  describe 'PUT /update' do
     User.destroy_all
     let!(:user) { create(:user) }
     let!(:photo_gallery) { create(:photo_gallery, user: user) }
     let!(:photo) { create(:photo, photo_gallery: photo_gallery) }
 
     context 'with valid params' do
-      it "updates a photo" do
+      it 'updates a photo' do
         get edit_photo_gallery_photo_path(photo_gallery, photo)
         expect(response).to render_template(:edit)
 
@@ -26,7 +28,7 @@ RSpec.describe "Photos", type: :request do
     end
 
     context 'with invalid params' do
-      it "throws an error" do
+      it 'throws an error' do
         get edit_photo_gallery_photo_path(photo_gallery, photo)
         expect(response).to render_template(:edit)
 

@@ -37,9 +37,9 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-    @photo_gallery.destroy
+    @photo.destroy
     respond_to do |format|
-      format.html { redirect_to photo_galleries_path, notice: 'Gallery was successfully deleted.' }
+      format.html { redirect_to photo_gallery_photos_path(photo_gallery), notice: 'Photo was successfully deleted.' }
     end
   end
 
