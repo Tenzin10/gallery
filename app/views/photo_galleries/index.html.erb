@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <h1>My Photo Galleries</h1>
+    <%= link_to "New Gallery", new_photo_gallery_path, class: "btn btn--primary" %>
+
+    <div>
+      <%= render @photo_galleries %>
+    </div>
+  </div>
+</div>

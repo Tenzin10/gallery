@@ -1,0 +1,8 @@
+<main>
+  <%= link_to sanitize("&larr; Back to galleries"), photo_galleries_path %>
+
+  <div>
+    <h1>New Gallery</h1>
+    <%= render "form", photo_gallery: @photo_gallery %>
+  </div>
+</main>

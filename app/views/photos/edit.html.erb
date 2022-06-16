@@ -1,0 +1,10 @@
+<h1>Edit the photo</h1>
+
+<%= simple_form_for [@photo_gallery, @photo], url: photo_gallery_photo_path(@photo_gallery, @photo), method: :patch, local: true do |f| %>
+  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.input :description %>
+  <%= f.input :shooting_date %>
+  <%= f.input :image %>
+  <%= link_to "Cancel", photo_gallery_photos_path(@photo_gallery), class: "btn btn--light" %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

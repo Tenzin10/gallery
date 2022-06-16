@@ -1,0 +1,11 @@
+<%= simple_form_for photo_gallery, html: { class: "gallery form" } do |f| %>
+  <% if photo_gallery.errors.any? %>
+    <div class="error-message">
+      <%= photo_gallery.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.input :description, input_html: { autofocus: true } %>
+  <%= link_to "Cancel", photo_galleries_path, class: "btn btn--light" %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>
