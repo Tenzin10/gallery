@@ -11,7 +11,7 @@ user = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.l
 1.upto(10).each do
   PhotoGallery.create!(
     user: user,
-    name: Faker::FunnyName.name,
+    name: "#{Faker::FunnyName.name} #{SecureRandom.hex(4)}",
     description: Faker::Lorem.sentence
   )
 end

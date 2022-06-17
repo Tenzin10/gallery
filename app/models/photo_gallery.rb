@@ -5,4 +5,5 @@ class PhotoGallery < ApplicationRecord
   has_many :photos, inverse_of: :photo_gallery, dependent: :destroy
 
   validates :name, :description, presence: true
+  validates :name, uniqueness: true
 end
