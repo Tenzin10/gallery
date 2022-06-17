@@ -4,6 +4,7 @@
 
 * ruby version: 2.6.7
 * rails version: 5.2.8
+* database: Postgres
 
 # running test cases
 
