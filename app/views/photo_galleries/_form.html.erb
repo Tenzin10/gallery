@@ -1,4 +1,4 @@
-<%= simple_form_for photo_gallery, html: { class: "gallery form" } do |f| %>
+<%= simple_form_for photo_gallery, html: { class: "photo-gallery form" } do |f| %>
   <% if photo_gallery.errors.any? %>
     <div class="error-message">
       <%= photo_gallery.errors.full_messages.to_sentence.capitalize %>

@@ -1,6 +1,12 @@
 <h1>Edit the gallery</h1>
 
-<%= simple_form_for @photo_gallery, url: photo_gallery_path(@photo_gallery), method: :patch, local: true do |f| %>
+<%= simple_form_for(
+      @photo_gallery,
+      url: photo_gallery_path(@photo_gallery),
+      method: :patch,
+      html: { class: "photo-gallery form" },
+      local: true
+    ) do |f| %>
 
   <%= f.input :name, input_html: { autofocus: true } %>
   <%= f.input :description %>

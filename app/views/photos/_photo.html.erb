@@ -1,23 +1,20 @@
 <div class="photo">
-  <div class="photo__actions">
-    <p>
-      <strong>Name:</strong>
-      <%= photo.name %>
-    </p>
+  <%= image_tag url_for(photo.image) if photo.image.attached? %>
+  <p>
+    <strong>Name:</strong>
+    <%= photo.name %>
+  </p>
 
-    <p>
-      <strong>Description:</strong>
-      <%= photo.description %>
-    </p>
+  <p>
+    <strong>Description:</strong>
+    <%= photo.description %>
+  </p>
 
-    <p>
-      <strong>Shooting Date:</strong>
-      <%= photo.shooting_date %>
-    </p>
-    <p>
-      <strong>Image:</strong>
-      <%= photo.image %>
-    </p>
+  <p>
+    <strong>Shooting Date:</strong>
+    <%= photo.shooting_date %>
+  </p>
+  <div class="photo-gallery__actions">
     <%= button_to "Delete", photo_gallery_photo_path(photo.photo_gallery, photo), method: :delete, class: "btn btn--light" %>
     <%= link_to "Edit", edit_photo_gallery_photo_path(photo.photo_gallery, photo), class: "btn btn--light" %>
   </div>

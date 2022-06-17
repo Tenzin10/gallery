@@ -2,7 +2,13 @@
   <%= link_to photo_gallery.name, photo_gallery_path(photo_gallery) %>
   <%= link_to photo_gallery.description, photo_gallery_path(photo_gallery) %>
   <div class="photo-gallery__actions">
-    <%= button_to "Delete", photo_gallery_path(photo_gallery), method: :delete, class: "btn btn--light" %>
+    <%= button_to(
+          "Delete",
+          photo_gallery_path(photo_gallery),
+          method: :delete, class: "btn btn--light",
+          data: photo_gallery.photos.exists? ? { confirm: "Are you sure?" } : nil
+        )
+    %>
     <%= link_to "Edit", edit_photo_gallery_path(photo_gallery), class: "btn btn--light" %>
   </div>
 </div>

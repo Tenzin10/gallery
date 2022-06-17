@@ -7,9 +7,7 @@ class PhotoGalleriesController < ApplicationController
     @photo_galleries = current_user.photo_galleries
   end
 
-  def show
-    @photo = photo_gallery.photos.new
-  end
+  def show; end
 
   def new
     @photo_gallery = PhotoGallery.new

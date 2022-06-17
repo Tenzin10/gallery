@@ -1,4 +1,4 @@
-<%= simple_form_for [@photo_gallery, @photo_gallery.photos.build] do |f| %>
+<%= simple_form_for [@photo_gallery, @photo_gallery.photos.build],  html: { class: "photo-gallery form" }  do |f| %>
   <%= f.input :name, input_html: { autofocus: true } %>
   <%= f.input :description %>
   <%= f.input :shooting_date %>

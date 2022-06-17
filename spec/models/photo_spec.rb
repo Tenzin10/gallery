@@ -8,13 +8,20 @@ RSpec.describe Photo, type: :model do
       name: Faker::Commerce.name,
       description: Faker::Lorem.sentence,
       shooting_date: DateTime.current,
-      photo_gallery: photo_gallery
+      photo_gallery: photo_gallery,
+      image: fixture_file_upload('image.jpeg')
     )
   end
 
   describe 'Validations' do
     it { should validate_presence_of(:name) }
     it { should validate_uniqueness_of(:name) }
+    it { should validate_attached_of(:image) }
+    it do
+      should
+      validate_content_type_of(:image)
+        .allowing('image/jpeg', 'image/bmp', 'image/tiff', 'image/svg+xml', 'image/png', 'image/gif')
+    end
   end
 
   describe 'Associations' do
