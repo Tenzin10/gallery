@@ -21,5 +21,5 @@
 
 # Time taken to build this project
 
-* around 6 hours
+* around 7 hours
 
