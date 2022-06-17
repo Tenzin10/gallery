@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Requirement
 
-Things you may want to cover:
+* ruby version: 2.6.7
+* rails version: 5.2.8
 
-* Ruby version
+# running test cases
 
-* System dependencies
+1. bundle install
+2. rails db:create db:migrate
+3. rspec or rspec specs/
 
-* Configuration
+## running server
 
-* Database creation
+1. bundle install
+2. rails db:create db:migrate db:seed
+3. rake assets:precompile
 
-* Database initialization
+# Time taken to build this project
 
-* How to run the test suite
+* around 6 hours
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

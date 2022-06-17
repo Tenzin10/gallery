@@ -10,13 +10,14 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'puma', '~> 3.11'
-gem 'rails', '~> 5.2.8'
+gem 'rails', '5.2.8'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 5.1.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'faker'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry'
   gem 'rubocop'
