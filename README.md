@@ -17,6 +17,7 @@
 1. bundle install
 2. rails db:create db:migrate db:seed
 3. rake assets:precompile
+4. rails s
 
 # Time taken to build this project
 
